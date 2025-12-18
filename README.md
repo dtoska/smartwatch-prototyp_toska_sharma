@@ -1,122 +1,27 @@
 # Smartwatch „Notfalldaten“
 ### Dion Toska · Yannis Sharma
 
----
+## Überblick  
+Diese Anwendung ist ein interaktiver Smartwatch-Prototyp für den Notfall- und Gesundheitsbereich. Ziel ist es, dass Rettungskräfte oder medizinisches Personal innerhalb weniger Sekunden die wichtigsten Informationen erfassen können und bei Bedarf direkt in Detailansichten wechseln.
 
-## Überblick
+## Grundidee  
+Die Oberfläche besteht aus mehreren Screens, von denen immer nur einer gleichzeitig sichtbar ist. Die Navigation erfolgt über Buttons oder klickbare Bereiche innerhalb der Uhr. Technisch wird dies über eine einfache Umschaltfunktion realisiert, die den jeweils aktiven Screen einblendet.
 
-Diese Oberfläche ist ein **interaktiver Smartwatch-Prototyp** für den Notfall- und Gesundheitsbereich.  
-Sie ist darauf ausgelegt, dass **Rettungskräfte oder medizinisches Personal sofort die wichtigsten Informationen erfassen** können und bei Bedarf in Detailansichten wechseln.
+## Screen 1 – Notfalldaten  
+Der Startscreen dient als zentraler Überblick im Notfall. Er zeigt die wichtigsten Patientendaten wie Name, Alter und Blutdruck sowie ein Profilbild als Platzhalter. Oben rechts befindet sich ein roter SOS-Button, der aktuell nur visuell vorhanden ist, aber für zukünftige Funktionen wie Notruf oder Alarmierung vorgesehen ist.
 
----
+Im unteren Bereich befinden sich zwei voneinander unabhängige Boxen auf schwarzem Hintergrund. In der linken Box werden relevante Vorerkrankungen angezeigt, die schnell erfasst werden sollen und keine Interaktion besitzen. In der rechten Box wird die aktuelle Schrittzahl dargestellt. Diese Box ist interaktiv und führt bei Antippen zur detaillierten Schrittansicht.
 
-## Grundprinzip
+Zusätzlich enthält der Screen eine kleine animierte EKG-Vorschau, die einen schnellen Eindruck der Herzaktivität vermittelt. Durch Antippen gelangt man in die Live-EKG-Ansicht. Über einen weiteren Button kann außerdem die Medikamentenliste geöffnet werden.
 
-- Die Uhr besteht aus **mehreren Screens (Ansichten)**
-- **Immer nur ein Screen ist sichtbar**
-- Navigation erfolgt über Buttons oder klickbare Bereiche
-- Technisch wird das über eine einfache Screen-Umschaltfunktion realisiert
+## Screen 2 – Live EKG  
+Dieser Screen zeigt eine vergrößerte, animierte EKG-Darstellung. Ein kurzer Hinweistext fordert dazu auf, den Finger auf der Crown zu halten, um eine Messung zu simulieren. Über einen Zurück-Button gelangt man wieder zur Notfalldaten-Übersicht.
 
----
+## Screen 3 – Medikamentenliste  
+In der Medikamentenliste werden alle relevanten Medikamente mit ihren Einnahmezeiten angezeigt. Bereits eingenommene Medikamente sind visuell abgeschwächt, während noch ausstehende klar hervorgehoben werden. Ein schwebender Plus-Button deutet die Möglichkeit an, neue Medikamente hinzuzufügen, ist aktuell jedoch nur als Platzhalter gedacht. Auch hier führt ein Zurück-Button wieder zum Startscreen.
 
-## Screen 1 – Notfalldaten (Startscreen)
+## Screen 4 – Schrittzähler  
+Die Schrittzähler-Detailansicht zeigt die aktuelle Tages-Schrittzahl in großer Darstellung sowie einen Fortschrittsbalken im Verhältnis zum Tagesziel von 10.000 Schritten. Ergänzend wird ein kleiner Verlauf mit Zeitangaben angezeigt. Über den Zurück-Button gelangt man wieder zu den Notfalldaten.
 
-Der zentrale Überblick im Notfall.
-
-### Inhalte
-- **Patientendaten**
-  - Name
-  - Alter
-  - Blutdruck
-- **Profilbild** (Platzhalter)
-
-### SOS-Button
-- Rot, oben rechts
-- Aktuell rein visuell
-- Gedacht für spätere Erweiterungen wie:
-  - Notruf
-  - Alarmierung
-  - Standortübermittlung
-
----
-
-### Vorerkrankungen (linke Box)
-- Eigene, unabhängige Box
-- Zeigt medizinisch relevante Risiken
-- Keine Interaktion
-- Gedacht für schnelles Erfassen im Notfall
-
----
-
-### Schritte (rechte Box)
-- Ebenfalls eine **eigenständige Box**
-- Steht bewusst **unabhängig von den Vorerkrankungen**
-- Zeigt aktuelle Schrittzahl
-
-**Interaktion:**
-- Antippen öffnet die Schrittzähler-Detailansicht (Screen 4)
-
----
-
-### EKG-Vorschau
-- Kleine animierte EKG-Darstellung
-- Gibt einen schnellen visuellen Eindruck der Herzaktivität
-
-**Interaktion:**
-- Antippen öffnet das Live-EKG (Screen 2)
-
----
-
-### Medikamentenliste-Button
-- Öffnet die Medikamentenübersicht (Screen 3)
-
----
-
-## Screen 2 – Live EKG
-
-Detaillierte Herzaktivitätsansicht.
-
-### Inhalte
-- Größere, animierte EKG-Darstellung
-- Hinweistext:
-  > „Finger auf Crown halten“
-
-### Navigation
-- **Zurück**
-  - Wechsel zurück zu den Notfalldaten (Screen 1)
-
----
-
-## Screen 3 – Medikamentenliste
-
-Übersicht über Medikamente und Einnahmezeiten.
-
-### Darstellung
-- Bereits eingenommene Medikamente sind visuell abgeschwächt
-- Noch ausstehende Medikamente sind aktiv dargestellt
-
-### Floating Action Button
-- Platzhalter für „Medikament hinzufügen“
-- Aktuell ohne Funktion
-- Zeigt geplante Erweiterbarkeit
-
-### Navigation
-- **Zurück**
-  - Wechsel zurück zu Screen 1
-
----
-
-## Screen 4 – Schrittzähler (Detailansicht)
-
-Detailansicht der täglichen Aktivität.
-
-### Inhalte
-- Große Anzeige der heutigen Schrittzahl
-- Fortschrittsbalken im Verhältnis zum Tagesziel (10.000 Schritte)
-- Kleine Aktivitäts-Historie mit Uhrzeit und Schritten
-
-### Navigation
-- **Zurück**
-  - Wechsel zurück zu den Notfalldaten (Screen 1)
-
----
+## Ziel des Prototyps  
+Der Fokus liegt auf einer klaren, ruhigen Darstellung mit schneller Orientierung im Notfall. Unterschiedliche Informationsbereiche sind bewusst getrennt, um Überforderung zu vermeiden. Der Prototyp bildet eine realistische Smartwatch-User-Experience ab und dient als solide Grundlage für funktionale Erweiterungen.
