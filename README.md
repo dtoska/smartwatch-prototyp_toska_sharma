@@ -120,5 +120,3 @@ Detailansicht der täglichen Aktivität.
   - Wechsel zurück zu den Notfalldaten (Screen 1)
 
 ---
-
-hrittzähler Detail
